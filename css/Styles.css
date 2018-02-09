@@ -1,34 +1,11 @@
-/**********
-BASE STYLES
-***********/
+
+/****
+ Base Element styles
+  ****/
 body{
 	text-align: center;
 
 }
-.name{
-	padding: .67em 0;
-	margin: 0;
-}
-.upper-part{
-	background: #F7F7F7;
-	padding-bottom: 5vh;
-}
-.nav > ul {
-	list-style: none;
-	padding: 0;
-	}
-.nav > ul > li > a {
-	text-decoration: none;
-	font-weight: 800;
-	display: block;
-	margin: 7px 14px;
-	padding: 12px 0;
-	background: #FFF;
-	color: #000;
-	border-radius: 10px;
-	transition: all .7s;
-}
-
 h1 {
 	font-family: 'open sans', helvetica;
 }
@@ -38,13 +15,6 @@ h1 {
 a {
 	text-decoration: none;
 }
-.bold-titles {
-	font-size: 26px;
-	font-weight: 700;
-	padding: 25px 0px;
-	color: #000;
-}
-
 h2{
 	color: #414141;
 	font-weight: 650;
@@ -55,30 +25,99 @@ h3 {
 	font-weight: 250;
 	color: #414141;
 }
-.face-img{
-	padding: 35px;
+address > a {
+	font-weight: 550;
+	color: #000;
+	
+}
+
+
+/******
+Containers
+*******/
+.upper-part{
+	background: #F7F7F7;
+	padding-bottom: 5vh;
+}
+/*.upper-wrapper{
+	margin: auto;
+	max-width: 1200px;
+	}*/
+.wrapper, .contact-wrapper{
+	margin: 0 auto;
+	max-width: 85vw;
+}
+
+/*****************/
+
+
+/*Nav Styles*/
+.nav > ul {
+	list-style: none;
+	padding: 0 0 30px 0;
+	margin: 0;
+	}
+	.nav > ul > li {
+		padding-top: 5px;
+		padding-bottom: 5px;
+	}
+.nav > ul > li > a {
 	box-sizing: border-box;
+	text-decoration: none;
+	font-weight: 600;
+	display: block;
+	width: 85%;
+	margin: auto;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	background: #FFF;
+	color: #000;
+	border-radius: 10px;
+	transition: all .6s;
 }
 .nav > ul > li > a:hover {
 	color: #404040;
-	margin: 0;
+	width: 90%;
 	background: #c0c0c0;
 }
-.foot{
-	background: #F7F7F7;
-	display: flex;
-	flex-direction: column;
-}
-img{
-	max-width: 100%;
+
+
+
+/******************/
+
+
+#name{
+	font-size: 1.6em;
+	padding: .6em 0 .4em 0;
+	margin: 0;
 }
 
-/**********
-Layout Styles
-**********/
-.wrapper, .contact-wrapper{
-	margin: 0 auto;
-	width: 85vw;
+
+.description {
+	padding: 1em;
+}
+.face-img,
+.main-images{
+	max-width: 100%;
+}
+.skills{
+	background-color: #dedede;
+}
+.skills > h2 {
+	margin: 0;
+	padding-top: 20px;
+}
+.skills > h3 {
+	padding-bottom:  15px;
+}
+
+
+
+/*******
+Footer
+********/
+.foot {
+background-color: #F7F7F7;
 }
 .contact-wrapper > h1 ,
 .foot > h1{
@@ -88,24 +127,115 @@ Layout Styles
 .contact-wrapper{
 	padding: 30px 0;
 }
-address > a {
-	font-weight: 550;
-	color: #000;
-	
-}
+
 .bottom-footer{
 	display: flex;
-	justify-content: space-around;
-}
-.foot-titles{
-	font-size: 18px;
-	font-weight: 550;
+	margin: auto;
+	justify-content: space-between;
+	width: 90vw;
 
 }
-.foot-titles > a{
+.foot-name,
+.foot-titles,
+.foot-extras{
+	font-size: 18px;
+	font-weight: 750;
+
+}
+.foot-name a:hover,
+.foot-titles a:hover,
+.foot-extras :hover{
+	border-bottom: 1px solid red;
+
+}
+.foot-name > a,
+.foot-titles > a,
+.foot-extras > a {
 	font-family: 'Open sans';
 	color: #000;
-	font-weight: 550;
-	font-size: 18px;
+	font-weight: 700;
+	font-size: 14px;
+
+}
+.bottom-footer {
+	padding-top: 5vh;
+	padding-bottom: 2vh;
+	border-top: 1px solid #7e7e7e;
+}
+.foot-extras{
+	display: none;
 }
 
+/**********
+Media Queries
+************/
+@media(min-width: 768px){
+.nav > ul   {
+	display: flex;
+	justify-content: center;
+}
+.nav > ul > li{
+	margin: 10px;
+	align-self: center;
+}
+.nav > ul > li > a {
+	box-sizing: content-box;
+	width: 100px;
+	/*padding: 10px;*/
+
+}
+.nav > ul > li > a:hover {
+	width: 100px;
+}
+
+.profile{
+	margin: 20px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.face-img{
+	order: 1;
+}
+.face-img,
+.description{
+	padding: 2em;
+}
+/*.description {
+	text-align: justify;
+}
+*/.wrapper{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+.section{
+	flex-basis: 49%;
+}
+.foot-extras{
+	display: inline;
+	margin-left: 14px;
+	}
+
+.foot-name{
+	margin-right: auto;
+}
+}
+
+@media(min-width: 1024px){
+.section {
+	flex-basis: 32%;
+}
+#name{
+	margin-left: 2em;
+	position: absolute;
+}
+.nav{
+	position: relative;
+}
+.nav > ul {
+	justify-content: flex-end;
+	margin-right: 2em;
+}
+
+}
