@@ -1,4 +1,4 @@
-
+@import url("https://fonts.googleapis.com/css?family=Encode+Sans+Expanded|Open+Sans|Roboto");
 /****
  Base Element styles
   ****/
@@ -17,16 +17,16 @@ a {
 }
 h2{
 	color: #414141;
-	font-weight: 650;
+	font-weight: 600;
 }
 h3 {
 	line-height: 22px;
 	font-size: 14px;
-	font-weight: 250;
+	font-weight: 200;
 	color: #414141;
 }
 address > a {
-	font-weight: 550;
+	font-weight: 500;
 	color: #000;
 	
 }
