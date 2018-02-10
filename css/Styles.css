@@ -8,6 +8,7 @@ body{
 }
 h1 {
 	font-family: 'open sans', helvetica;
+	color: #0c1b4b;
 }
  h2, h3, h4, a, li {
 	font-family: roboto;
@@ -139,7 +140,7 @@ background-color: #F7F7F7;
 .foot-titles,
 .foot-extras{
 	font-size: 18px;
-	font-weight: 750;
+	font-weight: 700;
 
 }
 .foot-name a:hover,
@@ -189,9 +190,8 @@ Media Queries
 }
 
 .profile{
-	margin: 20px;
 	display: flex;
-	justify-content: space-between;
+	justify-content: space-around;
 	align-items: center;
 }
 .face-img{
