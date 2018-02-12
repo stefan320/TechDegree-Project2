@@ -10,7 +10,7 @@ h1 {
 	font-family: 'open sans', helvetica;
 	color: #0c1b4b;
 }
- h2, h3, h4, a, li {
+p, h2, h3, h4, a, li {
 	font-family: roboto;
 }
 a {
@@ -20,7 +20,7 @@ h2{
 	color: #414141;
 	font-weight: 600;
 }
-h3 {
+p {
 	line-height: 22px;
 	font-size: 14px;
 	font-weight: 200;
@@ -108,7 +108,7 @@ Containers
 	margin: 0;
 	padding-top: 20px;
 }
-.skills > h3 {
+.skills > p {
 	padding-bottom:  15px;
 }
 
@@ -121,7 +121,7 @@ Footer
 background-color: #F7F7F7;
 }
 .contact-wrapper > h1 ,
-.foot > h1{
+.foot > h4{
 	margin: 0;
 	padding: 0;
 }
@@ -191,8 +191,10 @@ Media Queries
 
 .profile{
 	display: flex;
-	justify-content: space-around;
+	margin: auto;
+	justify-content: space-between;
 	align-items: center;
+	max-width: 1400px;
 }
 .face-img{
 	order: 1;
@@ -223,6 +225,9 @@ Media Queries
 }
 
 @media(min-width: 1024px){
+
+
+
 .section {
 	flex-basis: 32%;
 }
